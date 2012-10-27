@@ -1,10 +1,10 @@
 // JavaScript Document
 function deviceInfo(){
-	$('#device table td').eq(1).text(window.device.name);
-	$('#device table td').eq(3).text(device.phonegap);
-	$('#device table td').eq(5).text(device.platform);
-	$('#device table td').eq(7).text(device.version);
-	$('#device table td').eq(9).text(device.uuid);
+	$('#devic table td').eq(1).text(device.name);
+	$('#devic table td').eq(3).text(device.phonegap);
+	$('#devic table td').eq(5).text(device.platform);
+	$('#devic table td').eq(7).text(device.version);
+	$('#devic table td').eq(9).text(device.uuid);
 	}
 $(document).ready(function(e) {
 	deviceInfo();

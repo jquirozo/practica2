@@ -1,6 +1,6 @@
 // JavaScript Document
 function deviceInfo(){
-	$('#device table td').eq(1).text(device.name);
+	$('#device table td').eq(1).text(window.device.name);
 	$('#device table td').eq(3).text(device.phonegap);
 	$('#device table td').eq(5).text(device.platform);
 	$('#device table td').eq(7).text(device.version);

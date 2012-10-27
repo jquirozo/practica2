@@ -43,7 +43,7 @@ function newContact(){
 		contacto.name = new CountactName();
 		contacto.name.givenName = $('#contName').val();
 		contacto.name.familyName = $('#contFamily').val();
-		//TelÃ©fono
+		//Teléfono
 		var tel = ($('#contPhone').val()).substring(0,3)+'-'+($('#contPhone').val()).substring(3,3)+'-'+($('#contPhone').val()).substring(6,4);
 		contacto.phoneNunbers = [];
 		contacto.phoneNumbers[0] = new ContactField("mobile", tel, true);//p1("home","mobile","work") - p2(cadena de texto con formato 123-456-7890) - p3(true, false)
@@ -104,10 +104,10 @@ $(document).ready(function(){
 	document.addEventListener("deviceready", function(){
 		deviceData();//Datos del dispositivo
 		//Eventos
-			document.addEventListener("pause", function(){//Al pausar la aplicaciÃ³n
+			document.addEventListener("pause", function(){//Al pausar la aplicación
 				eventHistory('La aplicaci&oacute;n se paus&oacute;');
 			}, false);
-			document.addEventListener("resume", function(){//Al volver a la aplicaciÃ³n
+			document.addEventListener("resume", function(){//Al volver a la aplicación
 				eventHistory('La aplicaci&oacute;n se reinici&oacute;');
 			}, false);
 			document.addEventListener("online", function(){//Al conectarse a la red

@@ -135,10 +135,27 @@ $(document).ready(function(){
 });*/
 $(document).ready(function(){
 	document.addEventListener("deviceready",function(){
+		//Información del dispositivo
 		$('#devic table td').eq(1).text(device.name);
 		$('#devic table td').eq(3).text(device.cordova);
 		$('#devic table td').eq(5).text(device.platform);
 		$('#devic table td').eq(7).text(device.version);
 		$('#devic table td').eq(9).text(device.uuid);
+		//Historial Eventos
+		document.addEventListener("pause", function(){//Al pausar la aplicación
+			eventHistory('La aplicaci&oacute;n se paus&oacute;');
+		}, false);
+		document.addEventListener("resume", function(){//Al volver a la aplicación
+			eventHistory('La aplicaci&oacute;n se reinici&oacute;');
+		}, false);
+		document.addEventListener("online", function(){//Al conectarse a la red
+			eventHistory('La aplicaci&oacute;n se ha conectado');
+		}, false);
+		document.addEventListener("offline", function(){//Al desconectarse de la red
+			eventHistory('La aplicaci&oacute;n se ha desconectado');
+		}, false);
 	}, false);
 });
+function eventHistory(action){
+	$('#eventsHistory').append('<li>'+action+'</li>');
+}
